@@ -1,4 +1,3 @@
-#include <iostream>
 #include "glob_rand.h"
 #include "sudoku.h"
 #include <algorithm>
@@ -8,8 +7,8 @@ Sudoku::Sudoku( const int dim )
   : m_dim{ dim }, m_abs_dim{ dim*dim },
     m_grid{ std::make_unique<Vec<u_ptr<Vec<int>>>>() } {
   populate_grid();
-  perm_grid_swaps();
-  perm_grid_rc();
+  // perform permutations fo 2 kinds for an effective shuffle
+  perm_grid_swaps(); perm_grid_rc();
 }
 
 void Sudoku::populate_grid() noexcept {
