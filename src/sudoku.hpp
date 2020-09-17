@@ -1,7 +1,7 @@
 #ifndef __SUDOKU_H__
 #define __SUDOKU_H__
 
-#include "defs.h"
+#include "glob_defs.hpp"
 #include <vector>
 #include <iostream>
 #include <memory>

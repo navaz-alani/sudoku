@@ -1,5 +1,5 @@
-#include "sudoku.h"
-#include "glob_rand.h"
+#include "sudoku.hpp"
+#include "glob_rand.hpp"
 #include <string>
 #include <random>
 #include <chrono>
