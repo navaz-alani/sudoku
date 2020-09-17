@@ -1,8 +1,7 @@
 CXX=g++
-CXXFLAGS=-std=c++14 -Wall -g -MMD
+CXXFLAGS=-std=c++14 -Wall -g
 SOURCES=$(wildcard *.cc)
 OBJECTS=${SOURCES:.cc=.o}
-DEPENDS=${OBJECTS:.o=.d}
 EXEC=sudoku
 
 $(EXEC): $(OBJECTS)
@@ -15,4 +14,4 @@ $(EXEC): $(OBJECTS)
 
 .PHONY: clean
 clean:
-	rm -f $(OBJECTS) $(DEPENDS) $(EXEC)
+	rm -f $(OBJECTS) $(EXEC)
